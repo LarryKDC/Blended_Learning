@@ -2,11 +2,11 @@
 # Instruction Data Block
 The custom instruction data block allows users to interact with and analyze student performance data on several personalized learning platforms.
 
-##Getting Started
+#Getting Started
 
-###Usage
+##Usage
 
-###Tables
+##Tables
 ###Dim and Fact
 ####Fact
 The Instruction_Blended_Fact_v2 table contains the primary set of measures used for evaluating student progress.
@@ -22,6 +22,8 @@ This DimStudent table includes dimension values related to student attributes. A
 
 ####Platform Progress
 This table is used to define expected progress on a platform. The table contains one record per school per day. It reports the total days in the school year, and the total days to date. Those values are used to calculated expected progress on any given day. The table does not update nightly. It must be manually run at the beginning of each school. If there is a change to the school calendar, the query needs to be run in order to reflect those changes.
+
+The table should be joined on the platform key, date, and school.
 
 ###Example Query
 ``` SQL
