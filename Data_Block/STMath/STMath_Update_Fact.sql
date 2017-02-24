@@ -92,17 +92,6 @@ LEFT JOIN [CUSTOM].[INSTRUCTION_STMATH_LJ] ST_LAG ON ST_LAG.SCHOOL_STUDENT_ID = 
 WHERE DSCH.SYSTEMSCHOOLID!='-----'
 AND ST.REPORTDATE = '${ReportDate}'--@REPORTDATE
 --order by cast(ST.K_5_PROGRESS as float)  desc
-and (CASE 
-	WHEN ST.GCD LIKE 'First%' then 1
-	WHEN ST.GCD LIKE 'Second%' then 2
-	WHEN ST.GCD LIKE 'Third%' then 3
-	WHEN ST.GCD LIKE 'Fourth%' then 4
-	WHEN ST.GCD LIKE 'Fifth%' then 5
-	WHEN ST.GCD LIKE 'Sixth%' then 6
-	WHEN ST.GCD LIKE 'Seventh%' then 7
-	WHEN ST.GCD LIKE 'Eighth%' then 8
-	ELSE Null
- END) != s.grade_level
 --and studentkey = 7461
 --ORDER BY TEACHER_NAME,REPORTDATE
 ;
